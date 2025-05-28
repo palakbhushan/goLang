@@ -60,4 +60,25 @@ func main() {
 	slice2 := slice1[2:4]
 	fmt.Println(slice2)
 
+
+	//passing array to funcation-- passed as a value
+	//. Arrays are passed by value
+	a := [3]int{1, 2, 3}
+    changeArray(a)
+    fmt.Println("Array after function call:", a) // ✅ Output: [1 2 3]
+
+
+	// Slices are passed by reference (internally)
+	s := []int{1, 2, 3}
+    changeSlice(s)
+    fmt.Println("Slice after function call:", s) // ✅ Output: [999 2 3]
+
+}
+
+func changeArray(arr [3]int) {
+    arr[0] = 999
+}
+
+func changeSlice(s []int) {
+    s[0] = 999
 }
