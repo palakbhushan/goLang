@@ -1,8 +1,8 @@
 package main
-import {
+import (
 	"fmt",
 	"maps"
-}
+)
 
 func main(){
 // var mapVariable map[keyType]valueType
